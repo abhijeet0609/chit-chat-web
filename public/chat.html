@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chit-Chat</title>
+  <link rel='icon' href='images/ullu-seedha.png' type='image/x-icon' >
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Piedra&family=Sriracha&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="row main-row">
+    <div class="col-2 left-nav" >
+      <div class="logo-container">
+        <img src="images/logo-main.PNG" alt="logo" class="home-logo">
+      </div>
+      <div id="leftNav">
+      </div>
+    </div>
+    <div class="col-10 chat-container">
+      
+      <div id="msgsContainer" class="msgs-container">
+        <button class="btn-leave" onclick="leaveRoom()">Leave Room</button>
+      </div>
+      <div class="input-container row">
+        <input type="text" id="msgInput" onkeyup="keyUp(event)" placeholder="Enter Message" class=" col-md-10 col-9" autocomplete="off">
+    
+        <span  class="col-md-1 col-2">
+          <span class="row">
+            <i class="fa fa-paper-plane fa-lg col-6" aria-hidden="true" title="Send your location" onclick="sendMsg()"></i>
+            <i class="fa fa-map-marker fa-lg col-6" aria-hidden="true" title="Send Message" onClick="sendLocation()"></i>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <script id="messageTemplate" type="text/HTML">
+    <div class="msg-block-wrapper">
+      <div class="msg-container">
+        <p>
+          <span class="sender">{{sender}}</span>
+          <span class="time">{{time}}</span>
+        </p>
+        <p class="msg-text">{{message}}</p>
+      </div>
+    </div>
+    </script>
+  <script id="locationTemplate" type="text/HTML">
+      <div class="msg-block-wrapper">
+         <div class="msg-container">
+          <p>
+            <span class="sender">{{sender}}</span>
+            <span class="time">{{time}}</span>
+          </p>
+         <p>
+           <a href="{{message}}" target="_blank">Open in google maps</a>
+         </p>  
+         <!-- <a href="{{loc}}" target="_blank">Open in google maps</a> -->
+       </div>
+      </div>
+  </script>
+  <script id="leftNavTemplate" type="text/HTML">
+    <div class="room">Room: {{room}}</div>
+    <ul>
+      {{#activeUsers}}
+        <li>{{userName}}</li>
+      {{/activeUsers}}
+    </ul>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.1/mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/chat.js"></script>
+</body>
+
+</html>

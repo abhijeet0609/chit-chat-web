@@ -1,0 +1,211 @@
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.main-container{
+    margin: 0px 50px;
+    height: 100vh;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-row{
+    margin: 0px;
+}
+
+
+.facade-container{
+    /* border: 1px solid; */
+    width: 22%;
+    padding:5px;
+    min-width: 312px;
+}
+
+.header{
+    background-color: #02a9b4;
+    height: 34px;
+    padding: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.header-title{
+    color: white;
+    font-family: 'Piedra', cursive;
+    margin: 0px;
+    font-family: cursive;
+    letter-spacing: 10px;
+    display: inline-block;
+    position: absolute;
+    bottom: 11px;
+}
+.facade-container form{
+    /* padding: 10px; */
+}
+label{
+    font-size: 80%;
+    margin: 3px;
+    display: block;
+}
+.facade-container input{
+    display: block;
+    height: 28px;
+    width: 97%;
+}
+.facade-container button{
+    background-color: #02a9b4;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+.facade-container button:hover{
+    background-color: teal; 
+}
+/*............................Left -nav......................................*/
+.left-nav{
+    background-color: #02a9b4;
+    height: 100vh;
+    padding: 0px;
+}
+.logo-container{
+    /* height: 50px; */
+    display: flex;
+    justify-content: center;
+}
+.home-logo{
+    width: 100%;
+    height: auto;
+}
+/* .logo-text{
+    font-family: 'Piedra', cursive;
+    font-family: 'Sriracha', cursive;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    line-height: 60px;
+    height: 60px;
+} */
+.room{
+    padding: 10px;
+    font-weight: 800;
+    color: white;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    margin-top: 7px;
+}
+ul{
+    margin: 0px 12px;
+    padding: 0px;
+    font-weight: 600;
+
+}
+li{
+    list-style-type: none;
+    color: #d9d9d9;
+}
+
+
+/*..................... Chat css............................*/
+.chat-container{
+    padding-right: 0px;
+}
+p{
+    margin: 5px 0px;
+}
+.btn-leave {
+    padding: 9px;
+    background-color: #02a9b4;
+    border: 0px;
+    outline: none;
+    color: white;
+    position: sticky;
+    /* left: 1427px; */
+    top: 10px;
+    right: 15px;
+    font-size: 88%;
+    float: right;
+}
+.btn-leave:hover{
+    background-color: teal;
+}
+.msg-block-wrapper{
+    margin: 5px 0px;
+}
+.msgs-container{
+    padding: 5px;
+    height: 93vh;
+    /* margin-right: 15px; */
+    /* margin-top: 5px; */
+    overflow-y: auto;
+}
+.msg-container{
+    background-color: rgb(229, 240, 244);
+    display: inline-block;
+    border-radius: 10px;
+}
+.msg-container p{
+    padding: 2px 5px;
+}
+.float-right{
+    float: right;
+    margin-right: 15px;
+}
+.sender{
+    color: teal;
+}
+.time{
+    color: grey;
+    font-size: 70%;
+}
+.msg-text{
+    font-size: 90%;
+}
+.input-container{
+    height: 50px;
+    /* border: 1px solid; */
+    padding: 6px;
+    background: #02a9b4;
+}
+
+.input-container input{
+    padding: 5px;
+    height: 38px;
+    border: none;
+    outline: none;
+}
+.col-1{
+    flex: 0 0 5.333333%;
+    max-width: 5.333333%;
+}
+@media (min-width: 768px){
+    .col-md-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.3333%;
+    }
+}
+@media (min-width: 1030px){
+    .col-md-10 {
+        -ms-flex: 0 0 90.333333%;
+        flex: 0 0 90.333333%;
+        max-width: 90.3333%;
+    }
+}
+
+
+
+.fa-lg{
+    font-size: 1.333333em;
+    line-height: 1.75em;
+    vertical-align: -15%;
+    cursor: pointer;
+    color: white;
+}
+.fa-lg:hover{
+    color: rgb(214, 205, 199);
+}
